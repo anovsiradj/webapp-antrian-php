@@ -1,33 +1,18 @@
 <?php
+session_start();
+
+require("../inc/config.php");
+require("../inc/fungsi.php");
+require("../inc/koneksi.php");
+
 echo '<h1>
 Buat Table 
 </h1>
 <hr>';
 
 
-
-
-
-
-//membuat table database
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$koneksi = mysql_connect($dbhost, $dbuser, $dbpass);
-if(! $koneksi )
-{
-  die('Gagal Koneksi: ' . mysql_error());
-}
-
-
-echo 'Koneksi Berhasil';
-
-
-mysql_select_db('iwan_antrian');
-
-
 //buat table
-$sql = 'CREATE TABLE adminx ('.
+$sql = 'CREATE TABLE IF NOT EXISTS adminx ('.
   'kd varchar(50) NOT NULL, '.
   'usernamex varchar(50) NOT NULL, '.
   'passwordx varchar(50) NOT NULL, '.
@@ -65,7 +50,7 @@ if(! $buattabel )
 
 
 //buat table
-$sql = 'CREATE TABLE antrian ( '.
+$sql = 'CREATE TABLE IF NOT EXISTS antrian ( '.
   'kd varchar(50) NOT NULL, '.
   'nama varchar(100) NOT NULL, '.
   'alamat varchar(255) NOT NULL, '.

@@ -1,0 +1,13 @@
+{
+    "config": {
+        "vendor-dir": "php_packages"
+    },
+    "require": {
+        "dshafik/php7-mysql-shim": "*"
+    },
+    "require-dev": {
+        "filp/whoops": "*",
+        "symfony/var-dumper": "*"
+    },
+    "minimum-stability": "stable"
+}

@@ -23,7 +23,7 @@ mysql_query("CREATE DATABASE iwan_antrian");
 
 
 
-mysql_query("CREATE TABLE `adminx` (
+mysql_query("CREATE TABLE IF NOT EXISTS `adminx` (
   `kd` varchar(50) NOT NULL,
   `usernamex` varchar(50) NOT NULL,
   `passwordx` varchar(50) NOT NULL,
