@@ -140,4 +140,5 @@ function x_nextPrev($x_curpage, $x_pages)
    	return $x_next_prev;
    	}
 }
-?>
+
+# eof

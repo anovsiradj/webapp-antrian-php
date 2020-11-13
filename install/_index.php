@@ -1,5 +1,4 @@
-<?
-sleep(1);
+<?php
 session_start();
 
 require("../inc/config.php");
@@ -67,4 +66,5 @@ echo "BERHASIL INSTALL DATABASE";
 
 
 exit();
-?>
+
+# eof

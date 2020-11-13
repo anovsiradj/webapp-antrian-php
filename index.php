@@ -1,5 +1,4 @@
 <?
-sleep(1);
 session_start();
 
 require("inc/config.php");
@@ -14,4 +13,3 @@ require("inc/koneksi.php");
 $ke = "admin/index.php";
 xloc($ke);
 exit();
-?>

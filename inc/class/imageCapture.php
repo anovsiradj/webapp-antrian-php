@@ -46,4 +46,5 @@ else
 	header("Pragma: public");
 	echo base64_decode($_POST["image"]);
 	}
-?>
+
+# eof

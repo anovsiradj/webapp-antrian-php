@@ -159,4 +159,5 @@ require("../inc/niltpl.php");
 //diskonek
 xclose($koneksi);
 exit();
-?>
+
+# eof

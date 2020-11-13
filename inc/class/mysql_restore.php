@@ -64,4 +64,5 @@ function split_sql2($sql)
 
 	return($ret);
 	}
-?>
+
+# eof

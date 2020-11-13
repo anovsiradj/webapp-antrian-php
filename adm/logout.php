@@ -14,4 +14,5 @@ session_destroy();
 //re-direct
 xloc($sumber);
 exit();
-?>
+
+# eof

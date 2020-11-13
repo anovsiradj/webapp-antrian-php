@@ -123,4 +123,5 @@ echo "Tabel sukses dibuat\n";
 
 
 mysql_close($koneksi);
-?>
+
+# eof

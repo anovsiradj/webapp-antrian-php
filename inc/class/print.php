@@ -283,4 +283,5 @@ function txtentities($html){
 	$trans = array_flip($trans);
 	return strtr($html, $trans);
 }
-?>
+
+# eof

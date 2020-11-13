@@ -23,4 +23,5 @@ if(! $buatdb )
   die('Pembuatan database, gagal: ' . mysql_error());
 }
 echo "Database 'iwan_antrian' berhasil dibuat\n";
-mysql_close($koneksi);?>
+mysql_close($koneksi);
+# eof

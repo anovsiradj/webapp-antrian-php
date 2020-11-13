@@ -187,4 +187,5 @@ if ($aksi == "baca2")
 	
 	
 exit();
-?>
+
+# eof

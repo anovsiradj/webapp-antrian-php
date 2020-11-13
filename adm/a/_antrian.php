@@ -286,4 +286,5 @@ require("../../inc/niltpl.php");
 xfree($qbw);
 xclose($koneksi);
 exit();
-?>
+
+# eof
