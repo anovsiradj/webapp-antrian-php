@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-//sleep(1);
-
 //ambil nilai
 require("inc/config.php");
 require("inc/fungsi.php");
 require("inc/koneksi.php");
 
+/* APASIH SUSAHNYA PAKE array_key_exists,isset,empty ANJIM. */
+if (! ($_REQUEST instanceof webapp\libraries\ao)) $_REQUEST = new webapp\libraries\ao($_REQUEST);
 
 
 
@@ -26,9 +26,9 @@ if ($aksi == "tampil")
 							"AND round(DATE_FORMAT(postdate, '%m')) = '$bulan' ".
 							"AND round(DATE_FORMAT(postdate, '%Y')) = '$tahun' ".
 							"ORDER BY round(noantrian) DESC");
-	$rku1 = mysql_fetch_assoc($qku1);
-	$tku1 = mysql_num_rows($qku1);
-	$ku1_nomer = nosql($rku1['noantrian']); 
+	$rku1 = $qku1 ? mysql_fetch_assoc($qku1) : null;
+	$tku1 = $qku1 ? mysql_num_rows($qku1) : 0;
+	$ku1_nomer = nosql($rku1['noantrian'] ?? 0); 
 
 	
 	//nomor antrian, total yang ada + 1

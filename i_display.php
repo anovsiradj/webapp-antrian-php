@@ -6,6 +6,8 @@ require("inc/config.php");
 require("inc/fungsi.php");
 require("inc/koneksi.php");
 
+/* APASIH SUSAHNYA PAKE array_key_exists,isset,empty ANJIM. */
+if (! ($_REQUEST instanceof webapp\libraries\ao)) $_REQUEST = new webapp\libraries\ao($_REQUEST);
 
 
 //ambil nilai
@@ -82,6 +84,7 @@ if ($aksi == "baca2")
 							"ORDER BY postdate DESC");
 	$rku = mysql_fetch_assoc($qku);
 	$tku = mysql_num_rows($qku);	
+	$tku = 1;
 
 
 	//jika null, kasi info...
