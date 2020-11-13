@@ -8,7 +8,7 @@ require("../../inc/cek/adm.php");
 require("../../inc/class/paging.php");
 $tpl = LoadTpl("../../template/admin.html");
 
-nocache;
+
 
 //nilai
 $filenya = "antrian.php";

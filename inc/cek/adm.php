@@ -1,4 +1,7 @@
 <?php
+/* APASIH SUSAHNYA PAKE array_key_exists,isset,empty ANJIM. */
+if (! ($_SESSION instanceof webapp\libraries\ao)) $_SESSION = new webapp\libraries\ao($_SESSION);
+
 ///cek session //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $kd6_session = nosql($_SESSION['kd6_session']);
 $username6_session = nosql($_SESSION['username6_session']);

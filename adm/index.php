@@ -9,7 +9,7 @@ require("../inc/cek/adm.php");
 $tpl = LoadTpl("../template/admin.html");
 
 
-nocache;
+
 
 //nilai
 $filenya = "index.php";

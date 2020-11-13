@@ -2,6 +2,13 @@
 
 require __DIR__ . '/../php_packages/autoload.php';
 
+/* https://ne-a-r.blogspot.com/2018/11/hell-of-php-errors.html */
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', true);
+set_error_handler(function($errno, $errstr, $errfile, $errline) {
+ throw new \ErrorException($errstr, 0, $errno, $errfile, $errline);
+});
+
 $base_uri = str_replace($_SERVER['DOCUMENT_ROOT'], '', dirname(__DIR__));
 
 

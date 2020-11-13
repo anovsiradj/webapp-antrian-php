@@ -6,11 +6,14 @@ session_start();
 require("../inc/config.php");
 require("../inc/fungsi.php");
 require("../inc/koneksi.php");
+
+/* APASIH SUSAHNYA PAKE array_key_exists,isset,empty ANJIM. */
+if (! ($_POST instanceof webapp\libraries\ao)) $_POST = new webapp\libraries\ao($_POST);
+
 $tpl = LoadTpl("../template/login.html");
 
 
 
-nocache;
 
 //nilai
 $filenya = "index.php";
@@ -62,7 +65,6 @@ if ($_POST['btnOK'])
 		//cek login
 		if ($total != 0)
 			{
-			session_start();
 
 			//bikin session
 			$_SESSION['kd6_session'] = nosql($row['kd']);

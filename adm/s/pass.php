@@ -6,9 +6,13 @@ require("../../inc/config.php");
 require("../../inc/fungsi.php");
 require("../../inc/koneksi.php");
 require("../../inc/cek/adm.php");
+
+/* APASIH SUSAHNYA PAKE array_key_exists,isset,empty ANJIM. */
+if (! ($_POST instanceof webapp\libraries\ao)) $_POST = new webapp\libraries\ao($_POST);
+
 $tpl = LoadTpl("../../template/admin.html");
 
-nocache;
+
 
 //nilai
 $filenya = "pass.php";

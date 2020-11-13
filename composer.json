@@ -2,6 +2,11 @@
     "config": {
         "vendor-dir": "php_packages"
     },
+    "autoload": {
+        "psr-4": {
+            "webapp\\": "webapp"
+        }
+    },
     "require": {
         "dshafik/php7-mysql-shim": "*"
     },

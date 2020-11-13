@@ -6,9 +6,15 @@ require("../../inc/fungsi.php");
 require("../../inc/koneksi.php");
 require("../../inc/cek/adm.php");
 require("../../inc/class/paging.php");
+
+/* APASIH SUSAHNYA PAKE array_key_exists,isset,empty ANJIM. */
+if (! ($_POST instanceof webapp\libraries\ao)) $_POST = new webapp\libraries\ao($_POST);
+if (! ($_REQUEST instanceof webapp\libraries\ao)) $_REQUEST = new webapp\libraries\ao($_REQUEST);
+
+
 $tpl = LoadTpl("../../template/admin.html");
 
-nocache;
+
 
 //nilai
 $filenya = "antrian.php";

@@ -304,8 +304,8 @@ function xfree($str)
 //xclose
 function xclose($str)
 	{
-	mysql_free_result($str);
-	mysql_close($str);
+	// mysql_free_result($str);
+	// mysql_close($str);
 	}
 
 
@@ -337,20 +337,9 @@ function xgedi($str)
 //auto-kembali
 function xloc($str)
 	{
-	echo "<script>location.href='$str'</script>";
-//	header("Location:$str");
+		/* KALO TIDAK BISA PAKE HEADER, BERARTI KODING KAMU RUSAK. */
+	header("Location: ${str}");
 	}
-
-
-
-//auto-kembali, onload
-function xloc2($str,$str1)
-	{
-	echo "<script>location.href='$str';window.onload='$str1'</script>";
-	header("Location:$str1");
-	}
-
-
 
 //pesan
 function xpesan($str)
@@ -379,10 +368,10 @@ function pekem2($str)
 //kosongkan cache
 function nocache()
 	{
-	"header('cache-control:private') \n ".
-	"header('pragma:no-cache') \n ".
-	"header('cache-control:no-cache') \n ".
-	"flush()";
+	// "header('cache-control:private') \n ".
+	// "header('pragma:no-cache') \n ".
+	// "header('cache-control:no-cache') \n ".
+	// "flush()";
 	}
 
 
@@ -1902,6 +1891,13 @@ $arrrkolom = array(
        '103' => 'CZ'
 	);
 
+$arrhari	= new webapp\libraries\ao($arrhari);
+$arrbln	= new webapp\libraries\ao($arrbln);
+$arrbln1	= new webapp\libraries\ao($arrbln1);
+$arrbln2	= new webapp\libraries\ao($arrbln2);
+$arrroma	= new webapp\libraries\ao($arrroma);
+$arrrkelas	= new webapp\libraries\ao($arrrkelas);
+$arrrkolom	= new webapp\libraries\ao($arrrkolom);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

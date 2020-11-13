@@ -5,7 +5,7 @@ session_start();
 require("../inc/config.php");
 require("../inc/fungsi.php");
 
-nocache;
+
 
 //hapus session
 session_unset();
